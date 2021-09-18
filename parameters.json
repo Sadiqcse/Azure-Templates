@@ -1,0 +1,86 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "windowsserver674"
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/5eee7be9-cec2-439f-a2ec-3e32c405a1c4/resourceGroups/AzureWindows_group/providers/Microsoft.Network/networkSecurityGroups/AzureWindows-nsg"
+        },
+        "subnetName": {
+            "value": "AzureSubnet1"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/5eee7be9-cec2-439f-a2ec-3e32c405a1c4/resourceGroups/Azure-Learning/providers/Microsoft.Network/virtualNetworks/AzurevNet1"
+        },
+        "publicIpAddressName": {
+            "value": "WindowsServer-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "WindowsServer"
+        },
+        "virtualMachineComputerName": {
+            "value": "WindowsServer"
+        },
+        "virtualMachineRG": {
+            "value": "Azure-Learning"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "None",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "WindowsServer_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null,
+                    "diskEncryptionSet": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "WindowsServer_DataDisk_0",
+                    "sku": "StandardSSD_LRS",
+                    "properties": {
+                        "diskSizeGB": 8,
+                        "creationData": {
+                            "createOption": "empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2ms"
+        },
+        "adminUsername": {
+            "value": "sadiq"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "enableHotpatching": {
+            "value": false
+        }
+    }
+}
